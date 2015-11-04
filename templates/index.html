@@ -78,8 +78,18 @@
                     </div>
                     <div class="tags">
                     {% for tag, null in tags %}
-                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                    <a href="{{ SITEURL }}/{{ tag.url|lower }}">{{ tag }}</a>
                     {% endfor %}
+                    </div>
+                </div>
+                <div class="right-bar">
+                    <div class="right-head">
+                         Category
+                    </div>
+                    <div class="tags">
+                    {% for cat, null in categories %}
+                    <a href="{{ SITEURL }}/{{ cat.url|lower }}">{{ cat }}</a>
+                    {% endfor %}                    
                     </div>
                 </div>
             </div>
